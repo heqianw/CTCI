@@ -16,4 +16,18 @@ public class ChapterOne {
 		}
 		return true;
 	}
+	//Question 1.2: check permutations
+	public static boolean checkPermuatation(String first, String second) {
+		if(first.length() != second.length())
+			return false;
+		int[]numChar1 = new int[255];
+		int[]numChar2 = new int[255];
+		Arrays.fill(numChar1, 0);
+		Arrays.fill(numChar2, 0);
+		for(int i = 0; i < first.length(); i++) {
+			numChar1[(int)first.charAt(i)]++;
+			numChar2[(int)second.charAt(i)]++;
+		}
+		return Arrays.equals(numChar1, numChar2);
+	}
 }
