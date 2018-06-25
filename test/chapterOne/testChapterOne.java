@@ -2,6 +2,8 @@ package chapterOne;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.Arrays;
+
 import org.junit.jupiter.api.Test;
 
 class testChapterOne {
@@ -17,7 +19,12 @@ class testChapterOne {
 	void testCheckPermutation() {
 		assertEquals(ChapterOne.checkPermuatation("cater", "cater"), true);
 		assertEquals(ChapterOne.checkPermuatation("tare", "rate"), true);
-		assertEquals(ChapterOne.checkPermuatation("late", "rate"), true);
+		assertEquals(ChapterOne.checkPermuatation("late", "rate"), false);
+	}
+	@Test
+	void testdoURLify() {
+		char [] modify = {'M', 'r', ' ', 'S', 'm', 'i', 't', 'h', ' ', 'J', 'o', 'h', 'n', ' ', ' ', ' ', ' '};
+		assertEquals(ChapterOne.doURLify(modify, 13), "Mr%20Smith%20John");
 	}
 
 }
