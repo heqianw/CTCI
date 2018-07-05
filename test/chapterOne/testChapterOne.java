@@ -31,5 +31,19 @@ class testChapterOne {
 		String test = "tact coa";
 		assertEquals(ChapterOne.isPalindromePerm(test), true);
 	}
-
+	@Test
+	void testOneAway() {
+		String one = "pale";
+		String two = "ple";
+		assertEquals(ChapterOne.oneAway(one, two), true);
+		one = "pales";
+		two = "pale";
+		assertEquals(ChapterOne.oneAway(one, two), true);
+		one = "pale";
+		two = "bale";
+		assertEquals(ChapterOne.oneAway(one, two), true);
+		one = "pale";
+		two = "bake";
+		assertEquals(ChapterOne.oneAway(one, two), false);
+	}
 }

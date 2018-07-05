@@ -53,6 +53,7 @@ public class ChapterOne {
 		String result = new String(modify);
 		return result;
 	}
+	
 	//Question 1.4: Palindrome Permutation
 	public static boolean isPalindromePerm(String toCheck) {
 		boolean[] listChar = new boolean[256];
@@ -77,7 +78,54 @@ public class ChapterOne {
 		return true;
 	}
 	
-	
+	//Question 1.5: One Away
+	public static boolean oneAway(String one, String two) {
+		if(one.length()-two.length() > 1 || one.length()-two.length() < -1)
+			return false;
+		int index = 0; 
+		boolean oneOff = false; 
+		if(one.length() > two.length()) {
+			for(int i = 0; i < two.length(); i++) {
+				if(one.charAt(index) != two.charAt(i)) {
+					if(!oneOff && one.charAt(index + 1) == two.charAt(i)) {
+						oneOff = true;
+						index++;
+					}
+					else {
+						return false;
+					}
+				}
+				index++;
+			}
+		}
+		else if(one.length() == two.length()) {
+			for(int i = 0; i < one.length(); i++) {
+				if(one.charAt(i) != two.charAt(i)) {
+					if(!oneOff) {
+						oneOff = true;
+					}
+					else {
+						return false;
+					}
+				}
+			}
+		}
+		else {
+			for(int i = 0; i < one.length(); i++) {
+				if(one.charAt(i) != two.charAt(index)) {
+					if(!oneOff && one.charAt(i) == two.charAt(index + 1)) {
+						oneOff = true;
+						index++;
+					}
+					else {
+						return false;
+					}
+				}
+				index++;
+			}
+		}
+		return true;
+	}
 	
 	
 	
