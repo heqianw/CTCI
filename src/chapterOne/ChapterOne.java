@@ -127,6 +127,31 @@ public class ChapterOne {
 		return true;
 	}
 	
+	//Question 1.6: String Compression
+	public static String stringCompression(String toCompress) {
+		int counter = 1;
+		String compressed = "";
+		for(int i = 0; i < toCompress.length(); i++) {
+			if(i == toCompress.length() - 1)
+				if(counter == 1)
+					return compressed + toCompress.charAt(i);
+				else
+					return compressed + toCompress.charAt(i) + counter;
+			if(toCompress.charAt(i) == toCompress.charAt(i+1)) {
+				counter++;
+			}
+			else {
+				if(counter == 1) {
+					compressed = compressed + toCompress.charAt(i);
+				}
+				else {
+					compressed = compressed + toCompress.charAt(i) + counter;
+					counter = 1;
+				}
+			}
+		}
+		return compressed;
+	}
 	
 	
 	

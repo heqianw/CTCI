@@ -46,4 +46,11 @@ class testChapterOne {
 		two = "bake";
 		assertEquals(ChapterOne.oneAway(one, two), false);
 	}
+	@Test
+	void testStringCompression() {
+		String toCompress = "aaabbbccc";
+		assertEquals(ChapterOne.stringCompression(toCompress), "a3b3c3");
+		toCompress = "abcdefg";
+		assertEquals(ChapterOne.stringCompression(toCompress), "abcdefg");
+	}
 }
