@@ -26,5 +26,10 @@ class testChapterOne {
 		char [] modify = {'M', 'r', ' ', 'S', 'm', 'i', 't', 'h', ' ', 'J', 'o', 'h', 'n', ' ', ' ', ' ', ' '};
 		assertEquals(ChapterOne.doURLify(modify, 13), "Mr%20Smith%20John");
 	}
+	@Test
+	void testIsPalindromePerm() {
+		String test = "tact coa";
+		assertEquals(ChapterOne.isPalindromePerm(test), true);
+	}
 
 }

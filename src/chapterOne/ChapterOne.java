@@ -53,4 +53,37 @@ public class ChapterOne {
 		String result = new String(modify);
 		return result;
 	}
+	//Question 1.4: Palindrome Permutation
+	public static boolean isPalindromePerm(String toCheck) {
+		boolean[] listChar = new boolean[256];
+		int counter = 0;
+		Arrays.fill(listChar, false);
+		for(int i = 0; i < toCheck.length(); i++) {
+			if(toCheck.charAt(i) == ' ') {
+				continue;
+			}
+			else if(listChar[(int)toCheck.charAt(i)] == true) {
+				listChar[(int)toCheck.charAt(i)] = false;
+				counter--;
+			}
+			else {
+				listChar[(int)toCheck.charAt(i)] = true;
+				counter++;
+			}
+			System.out.println(counter);
+		}
+		if(counter > 1)
+			return false;
+		return true;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
