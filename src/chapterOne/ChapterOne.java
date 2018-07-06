@@ -186,8 +186,8 @@ public class ChapterOne {
 		return fresh;
 	}
 	
-	
-	
+	//Question 1.9: 
+	//will do when i write isSubstring
 	
 	
 	
