@@ -61,4 +61,10 @@ class testChapterOne {
 				ChapterOne.rotateMatrix(toRotate))));
 		Assert.assertArrayEquals(toRotate, result);
 	}
+	@Test
+	void testZeroMatrix() {
+		int[][] toZero = {{0, 1, 2, 3}, {4, 5, 6, 7}, {8, 9, 10, 11}};
+		int[][] result = {{0, 0, 0, 0}, {0, 5, 6, 7}, {0, 9, 10, 11}};
+		Assert.assertArrayEquals(ChapterOne.zeroMatrix(toZero), result);
+	}
 }

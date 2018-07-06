@@ -163,6 +163,30 @@ public class ChapterOne {
 		return rotated;
 	}
 	
+	//Quesiton 1.8: brute force method
+	public static int[][] zeroMatrix(int[][] fresh){
+		boolean[] rows = new boolean[fresh.length];
+		boolean[] columns = new boolean[fresh[0].length];
+		
+		for(int i = 0; i < fresh.length; i++) {
+			for(int j = 0; j < fresh[0].length; j++) {
+				if(fresh[i][j] == 0) {
+					rows[i] = true;
+					columns[j] = true;
+				}
+			}
+		}
+		for(int i = 0; i < fresh.length; i++) {
+			for(int j = 0; j < fresh[0].length; j++) {
+				if (rows[i] || columns[j]){
+					fresh[i][j] = 0;
+				}
+			}
+		}
+		return fresh;
+	}
+	
+	
 	
 	
 	
