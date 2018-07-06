@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Arrays;
 
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 class testChapterOne {
@@ -52,5 +53,12 @@ class testChapterOne {
 		assertEquals(ChapterOne.stringCompression(toCompress), "a3b3c3");
 		toCompress = "abcdefg";
 		assertEquals(ChapterOne.stringCompression(toCompress), "abcdefg");
+	}
+	@Test
+	void testRotateMatrix() {
+		int[][] toRotate = {{0, 1, 2, 3}, {4, 5, 6, 7}, {8, 9, 10, 11}};
+		int[][] result = ChapterOne.rotateMatrix(ChapterOne.rotateMatrix(ChapterOne.rotateMatrix(
+				ChapterOne.rotateMatrix(toRotate))));
+		Assert.assertArrayEquals(toRotate, result);
 	}
 }

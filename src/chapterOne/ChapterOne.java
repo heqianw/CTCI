@@ -71,7 +71,6 @@ public class ChapterOne {
 				listChar[(int)toCheck.charAt(i)] = true;
 				counter++;
 			}
-			System.out.println(counter);
 		}
 		if(counter > 1)
 			return false;
@@ -151,6 +150,17 @@ public class ChapterOne {
 			}
 		}
 		return compressed;
+	}
+	
+	//Question 1.7: Matrix Rotation
+	public static int[][] rotateMatrix(int[][] toRotate) {
+		int[][] rotated = new int[toRotate[0].length][toRotate.length];
+		for(int i = 0; i < toRotate.length; i++) {
+			for (int j = 0; j < toRotate[0].length; j++) {
+				rotated[j][rotated[0].length - 1 - i] = toRotate[i][j];
+			}
+		}
+		return rotated;
 	}
 	
 	
