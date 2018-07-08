@@ -1,8 +1,9 @@
 package chapterTwo;
+
 public class SLinkedList<E>  {
-	private 	SNode<E> head;			 
-	private		SNode<E> tail;		
-	private		int 	 size; 	
+	private 	SNode<E> head; 
+	private		SNode<E> tail;
+	private		int 	 size;
 	
 	SLinkedList(){
     	head  = null;
@@ -243,7 +244,7 @@ public class SLinkedList<E>  {
      *   lists:  the nodes up to the current node, and the nodes beyond the current node.
      */
 
-    public    void reverse(){
+	public void reverse(){
         SNode<E> headLeft, headRight, tmp;
         if (head != null){
             headLeft = null;
