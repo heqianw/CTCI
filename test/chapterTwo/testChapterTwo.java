@@ -19,5 +19,8 @@ class testChapterTwo {
 		list.add(8);
 		assertEquals(ChapterTwo.removeDup(list).toString(), "[5, 6, 3, 7, 8]");
 	}
+	//Quesiton 2.2 is trivial without a linked node class
+	
+	//Quesiton 2.3
 
 }
