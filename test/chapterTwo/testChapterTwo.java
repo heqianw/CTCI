@@ -21,6 +21,6 @@ class testChapterTwo {
 	}
 	//Quesiton 2.2 is trivial without a linked node class
 	
-	//Quesiton 2.3
+	//Quesiton 2.3 will do after linked node class
 
 }

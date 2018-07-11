@@ -32,5 +32,14 @@ public class ChapterTwo {
 	//runner after the first runner reaches the node with no more next
 	
 	//Question 2.3:
+	public static void deleteNode(LinkedList<Integer> list, int k) {
+		for(int i = k - 1; i < list.size() - 1; i++) {
+			list.set(i + 1, list.get(i));
+		}
+	}
+	//if we had a linked node class, we would just move the vales backwards, replacing the node k by the next one,
+	//and onwards until we reach the end. worst case of O(n)
+	
+	//Question 2.4:
 	
 }
