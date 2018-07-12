@@ -24,8 +24,24 @@ public class ChapterTwo {
 	//That would be O(n^2) complexity
 	
 	//Question 2.2:
-	public static int kToLast(LinkedList<Integer> list, int k){
+	/*public static int kToLast(LinkedList<Integer> list, int k){
 		return list.get(list.size() - k - 1);
+	}*/
+	public static LinkedNode kToLast(LinkedNode head, int k) {
+		LinkedNode one = head;
+		LinkedNode two = head;
+		int counter = 0;
+		while(one.hasNext(one)) {
+			if(counter >= k) {
+				one = one.next;
+				two = two.next;
+			}
+			else {
+				one = one.next;
+			}
+			counter++;
+		}
+		return two;
 	}
 	//without a linked node class, this solution is trivial, using the linked node, we would
 	//simply have the linkedlist iterate with two runners with k distance between them. we return the second

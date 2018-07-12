@@ -16,6 +16,10 @@ public class LinkedNode {
 		return false;
 	}
 	
+	public LinkedNode getNext(LinkedNode n) {
+		return n.next;
+	}
+	
 	public void appendTotail(int d) {
 		LinkedNode end = new LinkedNode(d);
 		LinkedNode n = this;
