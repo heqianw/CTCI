@@ -35,5 +35,24 @@ class testChapterTwo {
 	}
 	
 	//Quesiton 2.3 will do after linked node class
-
+	@Test
+	void testDeleteNode() {
+		LinkedNode n = new LinkedNode(5);
+		n.appendTotail(6);
+		n.appendTotail(7);
+		n.appendTotail(8);
+		n.appendTotail(9);
+		n.appendTotail(10);
+		LinkedNode buffer = n.next.next;
+		ChapterTwo.deletNode(buffer);
+		assertEquals(5, n.data);
+		n = n.next;
+		assertEquals(6, n.data);
+		n = n.next;
+		assertEquals(8, n.data);
+		n = n.next;
+		assertEquals(9, n.data);
+		n = n.next;
+		assertEquals(10, n.data);
+	}
 }

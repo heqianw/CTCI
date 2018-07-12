@@ -48,9 +48,16 @@ public class ChapterTwo {
 	//runner after the first runner reaches the node with no more next
 	
 	//Question 2.3:
-	public static void deleteNode(LinkedList<Integer> list, int k) {
+	/*public static void deleteNode(LinkedList<Integer> list, int k) {
 		for(int i = k - 1; i < list.size() - 1; i++) {
 			list.set(i + 1, list.get(i));
+		}
+	}*/
+	
+	public static void deletNode(LinkedNode n) {
+		while(n.next != null) {
+			n.data = n.next.data;
+			n = n.next;
 		}
 	}
 	//if we had a linked node class, we would just move the vales backwards, replacing the node k by the next one,
