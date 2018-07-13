@@ -64,5 +64,35 @@ public class ChapterTwo {
 	//and onwards until we reach the end. worst case of O(n)
 	
 	//Question 2.4:
+	public static LinkedNode partition (LinkedNode head, int x) {
+		if(head.next == null) {
+			return head;
+		}
+		if(head.next.next == null) {
+			if(head.data > head.next.data) {
+				head.next.next = head;
+				head.next = null;
+			}
+			return head;
+		}
+		LinkedNode n = head.next;
+		LinkedNode previous = head;
+		while(n.next != null) {
+			if(n.data < x) {
+				previous.next = n.next;
+				n.next = head;
+				head = n;
+				n = previous.next;
+			}
+			else {
+				previous = n;
+				n = n.next;
+			}
+		}
+		n.next = null;
+		return head;
+	}
+	
+	
 	
 }

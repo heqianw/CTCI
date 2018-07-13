@@ -55,4 +55,18 @@ class testChapterTwo {
 		n = n.next;
 		assertEquals(10, n.data);
 	}
+	@Test
+	void testPartition() {
+		LinkedNode n = new LinkedNode(3);
+		n.appendTotail(6);
+		n.appendTotail(4);
+		n.appendTotail(7);
+		n.appendTotail(1);
+		n.appendTotail(5);
+		n = ChapterTwo.partition(n, 5);
+		while(n != null) {
+			System.out.println(n.data);
+			n = n.next;
+		}
+	}
 }
