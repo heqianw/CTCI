@@ -149,7 +149,31 @@ public class ChapterTwo {
 	
 	//Question 2.6: isPalindrome
 	public static boolean isPalindrome(LinkedNode n) {
-		
+		LinkedNode reverse = reverseClone(n);
+		return isEqual(n, reverse);
+	}
+	
+	//write this method in recursive to practice
+	private static LinkedNode reverseClone(LinkedNode node) {
+		LinkedNode head = null;
+		while(node != null) {
+			LinkedNode n =new LinkedNode(node.data);
+			n.next = head;
+			head = n;
+			node = node.next;
+		}
+		return head;
+	}
+	
+	private static boolean isEqual(LinkedNode one, LinkedNode two) {
+		while(one != null && two != null) {
+			if(one.data != two.data) {
+				return false;
+			}
+			one = one.next;
+			two = two.next;
+		}
+		return one == null && two == null;
 	}
 	
 	
