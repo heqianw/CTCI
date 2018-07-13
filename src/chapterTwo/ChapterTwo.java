@@ -94,5 +94,59 @@ public class ChapterTwo {
 	}
 	
 	
+	//Question 2.5: Sum lists
+	public static LinkedNode sumLists(LinkedNode one, LinkedNode two) {
+		LinkedNode sumHead = new LinkedNode(0);
+		LinkedNode digit = new LinkedNode(0);
+		LinkedNode tail = new LinkedNode(0);
+		sumHead.next = digit;
+		int carry = 0;
+		while(one != null || two != null || carry != 0) {
+			if(one != null && two != null) {
+				if((one.data + two.data + carry) > 9 ) {
+					digit.data = (one.data + two.data + carry) % 10;
+					carry = 1;		
+				}
+				else {
+					digit.data = (one.data + two.data + carry);
+					carry = 0;
+				}
+			}
+			else if(one == null && two != null) {
+				if((two.data + carry) > 9) {
+					digit.data = (two.data + carry) % 10;
+					carry = 1;
+				}
+				else {
+					digit.data = (two.data + carry);
+					carry = 0;
+				}
+			}
+			else if(one != null && two == null) {
+				if((one.data + carry) > 9) {
+					digit.data = (one.data + carry) % 10;
+					carry = 1;
+
+				}
+				else {
+					digit.data = (one.data + carry);
+					carry = 0;
+				}
+			}
+			else if(one == null && two == null && carry == 1) {
+				digit.data = 1;
+				carry = 0;
+			}
+			one = one.next;
+			two = two.next;
+			tail = digit;
+			digit.next = new LinkedNode(0);
+			digit = digit.next;
+		}
+		tail.next = null;
+		return sumHead.next;
+	}
+	
+	
 	
 }

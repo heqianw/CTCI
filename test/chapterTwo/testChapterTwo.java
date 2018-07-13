@@ -64,9 +64,24 @@ class testChapterTwo {
 		n.appendTotail(1);
 		n.appendTotail(5);
 		n = ChapterTwo.partition(n, 5);
-		while(n != null) {
+		/*while(n != null) {
 			System.out.println(n.data);
 			n = n.next;
+		}*/
+	}
+	@Test
+	void testSumList() {
+		LinkedNode one = new LinkedNode(7);
+		one.appendTotail(1);
+		one.appendTotail(6);
+		LinkedNode two = new LinkedNode(5);
+		two.appendTotail(9);
+		two.appendTotail(2);
+		LinkedNode sum = ChapterTwo.sumLists(one, two);
+		while(sum != null) {
+			System.out.println(sum.data);
+			sum = sum.next;
 		}
+		
 	}
 }
