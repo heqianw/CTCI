@@ -147,6 +147,11 @@ public class ChapterTwo {
 		return sumHead.next;
 	}
 	
+	//Question 2.6: isPalindrome
+	public static boolean isPalindrome(LinkedNode n) {
+		
+	}
+	
 	
 	
 }
