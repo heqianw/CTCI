@@ -187,7 +187,4 @@ public class ChapterTwo {
 		}
 		return one == null && two == null;
 	}
-	
-	
-	
 }
