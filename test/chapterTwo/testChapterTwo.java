@@ -84,4 +84,8 @@ class testChapterTwo {
 		}
 		
 	}
+	@Test
+	void testPalindrome() {
+		
+	}
 }
