@@ -1,4 +1,4 @@
-package chapterTwo;
+package chapter2;
 
 public class LinkedNode {
 	//bad practice but for the purpose of simplifying the exercise, must set it as public

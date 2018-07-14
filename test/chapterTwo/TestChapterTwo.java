@@ -6,6 +6,9 @@ import java.util.LinkedList;
 
 import org.junit.jupiter.api.Test;
 
+import chapter2.ChapterTwo;
+import chapter2.LinkedNode;
+
 
 class TestChapterTwo {
 

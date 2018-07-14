@@ -1,4 +1,4 @@
-package chapterTwo;
+package chapter2;
 
 public class SLinkedList<E>  {
 	private 	SNode<E> head; 
