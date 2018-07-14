@@ -29,5 +29,11 @@ public class ArrayThreeStack {
 			return false;
 	}
 	
+	public void push(int x, int stackNumber) {
+		stacks[stackNumber + (pointers[stackNumber] * 3)] = x;
+		this.pointers[stackNumber]++;
+	}
+	
+
 	
 }
