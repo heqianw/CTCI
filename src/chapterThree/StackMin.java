@@ -40,14 +40,18 @@ public class StackMin {
 	}
 	
 	public int pop() {
-		
+		this.pointer--;
+		if(mins[this.pointMin - 1] == stack[this.pointer]) {
+			this.pointMin--;
+		}
+		return stack[this.pointer];
 	}
 	
 	public int peek() {
-
+		return stack[pointer - 1];
 	}
 	
 	public int min() {
-
+		return mins[pointMin - 1];
 	}
 }
