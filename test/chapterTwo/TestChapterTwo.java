@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import org.junit.jupiter.api.Test;
 
 
-class testChapterTwo {
+class TestChapterTwo {
 
 	@Test
 	void testRemoveDup() {
