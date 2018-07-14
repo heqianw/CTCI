@@ -30,10 +30,27 @@ public class ArrayThreeStack {
 	}
 	
 	public void push(int x, int stackNumber) {
-		stacks[stackNumber + (pointers[stackNumber] * 3)] = x;
+		//could add a few lines to double array size
+		this.stacks[stackNumber + (pointers[stackNumber] * 3)] = x;
 		this.pointers[stackNumber]++;
 	}
 	
-
+	public int pop(int stackNumber) {
+		if(isEmpty(stackNumber)) {
+			System.out.println("Stack is empty");
+			return Integer.MIN_VALUE;
+		}
+		//no need to set it to 0, pointer is our source of truth
+		this.pointers[stackNumber]--;
+		return this.stacks[stackNumber + (this.pointers[stackNumber] * 3)];
+	}
+	
+	public int peek(int stackNumber) {
+		if(isEmpty(stackNumber)) {
+			System.out.println("Stack is empty");
+			return Integer.MIN_VALUE;
+		}
+		return this.stacks[stackNumber + (this.pointers[stackNumber] * 3 - 3)];
+	}
 	
 }
