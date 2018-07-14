@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class TestChapterThree {
+class TestStackMin {
 
 	@Test
 	void test() {
