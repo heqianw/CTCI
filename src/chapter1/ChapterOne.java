@@ -1,4 +1,4 @@
-package chapterOne;
+package chapter1;
 
 import java.util.Arrays;
 

@@ -7,6 +7,8 @@ import java.util.Arrays;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
+import chapter1.ChapterOne;
+
 class TestChapterOne {
 
 	@Test
