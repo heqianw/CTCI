@@ -165,6 +165,18 @@ public class ChapterTwo {
 		return head;
 	}
 	
+/*	private static LinkedNode reverseClone(LinkedNode node) {
+		if(node.next != null) {
+			LinkedNode n = new LinkedNode(node.data);
+			return n;
+			}
+		else {
+			LinkedNode n = new LinkedNode(node.data);
+			n.next = reverseClone(node.next);
+			return n;
+		}
+	}*/
+	
 	private static boolean isEqual(LinkedNode one, LinkedNode two) {
 		while(one != null && two != null) {
 			if(one.data != two.data) {
