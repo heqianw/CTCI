@@ -2,6 +2,7 @@ package chapterThree;
 
 import java.util.Stack;
 
+//Question 3.5
 public class SortStacks {
 	public void sortStacks(Stack<Integer> stack) {
 		Stack<Integer> temp = new Stack<Integer>();
