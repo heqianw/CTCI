@@ -2,9 +2,9 @@
 Practice for coding interviews
 
 Finished:
--Chapter 1
--Chapter 2
--Chapter 3
+  Chapter 1
+  Chapter 2
+  Chapter 3
 
 In progress:
--Chapter 4
+  Chapter 4
