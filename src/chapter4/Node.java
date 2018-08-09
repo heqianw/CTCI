@@ -17,4 +17,7 @@ public class Node {
 	public int getValue() {
 		return this.value;
 	}
+	//nodes whose parent is deleted and which cluster has no more
+	//connection with main branch might eventually get cleaned up
+	//by garbage collection?
 }
