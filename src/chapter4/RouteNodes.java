@@ -9,8 +9,12 @@ public class RouteNodes {
 	//since this is a directed graph(one direction only)
 	//we would make two BFS runs, one from each node
 	
+	//first is the recursive approach which is cleaner
+	
+	
+	
 	//here is two implementations, iterative and the recursive approach
-	//first the iterative approach
+	//second the iterative approach
 	public boolean routeNodes(Graph graph, Node one, Node two) {
 		//condition to check at the start, for if equal
 		LinkedList<Node> queue = new LinkedList<Node>();
