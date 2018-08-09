@@ -3,6 +3,7 @@ package chapter4;
 public class Node {
 	private int value;
 	private Node[] children;
+	public State state;
 	
 	public Node(int value) {
 		this.value = value;
@@ -20,4 +21,8 @@ public class Node {
 	//nodes whose parent is deleted and which cluster has no more
 	//connection with main branch might eventually get cleaned up
 	//by garbage collection?
+
+	public Node[] getChildren() {
+		return children;
+	}
 }
