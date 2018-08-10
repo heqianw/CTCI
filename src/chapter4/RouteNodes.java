@@ -10,7 +10,27 @@ public class RouteNodes {
 	//we would make two BFS runs, one from each node
 	
 	//first is the recursive approach which is cleaner
-	
+	public boolean isRoute(Node one, Node two, Node current) {
+		if(one == two) {
+			return true;
+		}
+		else {
+			if(two.equals(current)) {
+				return true;
+			}
+			else {
+				current.state = State.Visited;
+				for(Node n : current.getChildren()) {
+					if(!n.state.equals(State.Visited)) {
+						current = n;
+						isRoute(one, two, current);
+					}
+				}
+				return false;
+			}
+		}
+		
+	}
 	
 	
 	//here is two implementations, iterative and the recursive approach
