@@ -7,6 +7,8 @@ public class BSTNode {
 	
 	public BSTNode(int data) {
 		this.data = data;
+		left = null;
+		right = null;
 	}
 	
 }
