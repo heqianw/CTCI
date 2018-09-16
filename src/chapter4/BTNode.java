@@ -1,11 +1,11 @@
 package chapter4;
 
-public class BSTNode {
+public class BTNode {
 	public int data;
-	public BSTNode left;
-	public BSTNode right;
+	public BTNode left;
+	public BTNode right;
 	
-	public BSTNode(int data) {
+	public BTNode(int data) {
 		this.data = data;
 		left = null;
 		right = null;

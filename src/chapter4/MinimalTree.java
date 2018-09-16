@@ -10,12 +10,12 @@ public class MinimalTree {
 	//so on until we get to when the start/end index tells us to stop
 	
 	//Recursively, this is very simple to execute, just need to keep track of the left/right index starts and we cool
-	public BSTNode minTree(int[] sorted, int start, int end) {
+	public BTNode minTree(int[] sorted, int start, int end) {
 		if(start > end) {
 			return null;
 		}
 		int center = (start + end) / 2;
-		BSTNode root = new BSTNode(sorted[center]);
+		BTNode root = new BTNode(sorted[center]);
 		root.left = minTree(sorted, start, center - 1);
 		root.right = minTree(sorted, center + 1, end);
 		return root;
